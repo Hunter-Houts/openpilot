@@ -16,13 +16,13 @@ PEDAL_TRANSITION = 10. * CV.MPH_TO_MS
 
 class CarControllerParams:
   STEER_STEP = 1
-  STEER_MAX = 1875
-  STEER_ERROR_MAX = 440     # max delta between torque cmd and torque motor
+  STEER_MAX = 1500
+  STEER_ERROR_MAX = 350     # max delta between torque cmd and torque motor
 
   # Lane Tracing Assist (LTA) control limits
   ANGLE_LIMITS: AngleSteeringLimits = AngleSteeringLimits(
     # EPS ignores commands above this angle and causes PCS to fault
-    100.0,  # deg
+    94.9461,  # deg
     # Assuming a steering ratio of 13.7:
     # Limit to ~2.0 m/s^3 up (7.5 deg/s), ~3.5 m/s^3 down (13 deg/s) at 75 mph
     # Worst case, the low speed limits will allow ~4.0 m/s^3 up (15 deg/s) and ~4.9 m/s^3 down (18 deg/s) at 75 mph,
