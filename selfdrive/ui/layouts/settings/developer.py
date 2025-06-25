@@ -49,4 +49,6 @@ class DeveloperLayout:
   def _on_enable_adb(self): pass
   def _on_joystick_debug_mode(self): pass
   def _on_long_maneuver_mode(self): pass
-  def _on_alpha_long_enabled(self): pass
+  def _on_alpha_long_enabled(self):
+    current_value = self._params.get_bool("AlphaLongitudinalEnabled")
+    self._params.put_bool("AlphaLongitudinalEnabled", not current_value)
