@@ -8,7 +8,14 @@
 #include "selfdrive/ui/sunnypilot/qt/offroad/settings/vehicle/toyota_settings.h"
 
 ToyotaSettings::ToyotaSettings(QWidget *parent) : BrandSettingsInterface(parent) {
+  // Toyota Stop and Go hack
+  toyotaSnGToggle = new ParamControl("ToyotaSnG", 
+                                     tr("Toyota Stop and Go"), 
+                                     tr("Enable auto-resume from stop for Prius without pedal input. Requires openpilot longitudinal control."), 
+                                     "");
+  list->addItem(toyotaSnGToggle);
 }
 
 void ToyotaSettings::updateSettings() {
+  // Keep it simple - toggle always available like live delay toggle
 }
