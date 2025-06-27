@@ -178,6 +178,9 @@ inline static std::unordered_map<std::string, uint32_t> keys = {
 
     // model panel params
     {"LagdToggle", PERSISTENT | BACKUP},
+    
+    // vehicle specific params
+    {"ToyotaSnG", PERSISTENT | BACKUP},
 
     // mapd
     {"MapAdvisorySpeedLimit", CLEAR_ON_ONROAD_TRANSITION},
