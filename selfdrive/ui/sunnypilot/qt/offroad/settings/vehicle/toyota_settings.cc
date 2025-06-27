@@ -9,10 +9,10 @@
 
 ToyotaSettings::ToyotaSettings(QWidget *parent) : BrandSettingsInterface(parent) {
   // Toyota Stop and Go hack
-  toyotaSnGToggle = new ParamControl("ToyotaSnG", 
-                                     tr("Toyota Stop and Go"), 
-                                     tr("Enable auto-resume from stop for Prius without pedal input. Requires openpilot longitudinal control."), 
-                                     "");
+  toyotaSnGToggle = new ParamControlSP("ToyotaSnG", 
+                                       tr("Toyota Stop and Go"), 
+                                       tr("Enable auto-resume from stop for Prius without pedal input. Requires openpilot longitudinal control."), 
+                                       "");
   list->addItem(toyotaSnGToggle);
 }
 

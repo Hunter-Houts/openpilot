@@ -23,5 +23,5 @@ public:
 
 private:
   bool offroad = false;
-  ParamControl *toyotaSnGToggle = nullptr;
+  ParamControlSP *toyotaSnGToggle = nullptr;
 };
